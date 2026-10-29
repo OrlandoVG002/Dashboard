@@ -1,0 +1,82 @@
+.homeboard-image {
+    width: 100%;
+    height: calc(100vh - 56px);
+    max-height: calc(100vh - 56px);
+    object-fit: cover;
+    object-position: 50% 0%;
+    overflow: hidden;
+}
+.span-game{
+    color: '#20c997'
+}
+
+.carousel_item_overlay::after {
+    position: absolute;
+    inset: 45% 0 0;
+    z-index: 0;
+    content: '';
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.78) 85%
+    );
+    opacity: .4;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.carousel_item_overlay:hover::after {
+    opacity: 1;
+}
+
+.carousel_item_link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.slide-description {
+    display: -webkit-box;
+    overflow: hidden;
+    line-height: 1.5;
+    max-height: 4.5em;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    font-style: italic;
+}
+
+.homeboard_carousel .carousel-control-prev,
+.homeboard_carousel .carousel-control-next {
+    position: absolute;
+    z-index: 2;
+    width: 12%;
+    opacity: 1;
+}
+
+.homeboard_carousel .carousel-control-prev::before,
+.homeboard_carousel .carousel-control-next::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.homeboard_carousel .carousel-control-prev::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.65), transparent);
+}
+
+.homeboard_carousel .carousel-control-next::before {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.65), transparent);
+}
+
+.homeboard_carousel .carousel-control-prev:hover::before,
+.homeboard_carousel .carousel-control-next:hover::before {
+    opacity: 1;
+}
+
+
+

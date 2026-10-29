@@ -1,0 +1,8 @@
+.image-game{
+    width: '100%';
+    height: 'calc(100vh - 56px)';
+    max-height: 'calc(100vh - 56px)';
+    object-fit: 'cover';
+    object-position: '50% 0%';
+    overflow: 'hidden';
+}
